@@ -101,7 +101,7 @@ function Home() {
         <FeatureCard
             title="Chat With Pdf"
             description="Draft a legal brief with issue, facts, and reasoning"
-            link="/Briefdraft"
+            link="/Chatpdf"
             image={LegalInsightsImage}
         />
     </div>
