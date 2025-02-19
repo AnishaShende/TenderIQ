@@ -1,0 +1,10 @@
+fastapi
+langchain
+langchain_groq
+numpy
+pdf2image
+pydantic
+pytesseract
+Requests
+sentence_transformers
+uvicorn
