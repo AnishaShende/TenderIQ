@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { FileText, MessageSquare } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-export default function Home() {
+const pdfchat = () => {
   const router = useRouter();
 
   const handleSummarize = () => {
@@ -54,4 +54,6 @@ export default function Home() {
       </main>
     </div>
   );
-}
+};
+
+export default pdfchat;
