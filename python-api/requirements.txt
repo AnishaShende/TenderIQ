@@ -8,3 +8,4 @@ pytesseract
 Requests
 sentence_transformers
 uvicorn
+python-multipart

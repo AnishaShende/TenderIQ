@@ -21,7 +21,7 @@ function App() {
         <Route path="/ResearchLaws" element={<ResearchLaws />} />
         <Route path="/CaseSummaries" element={<CaseSummaries />} />
         <Route path="/Insights" element={<Insights />} />
-        <Route path="/Briefdraft" element={<LegalBriefDrafting />} />z
+        <Route path="/Briefdraft" element={<LegalBriefDrafting />} />
       </Routes>
     </div>
   );
