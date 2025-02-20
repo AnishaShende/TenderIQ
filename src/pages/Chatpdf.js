@@ -1,18 +1,28 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
+import Button from "./components/Button";
 import { FileText, MessageSquare } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { useNavigate } from "react-router-dom";
 
-const pdfchat = () => {
-  const router = useRouter();
+// Capitalize component name to follow React conventions
+const PdfChat = () => {
+  const router = useNavigate();
 
+  // Add error handling for navigation
   const handleSummarize = () => {
-    router.push("/summary2");
+    try {
+      router.push("/summary2");
+    } catch (error) {
+      console.error("Navigation error:", error);
+    }
   };
 
   const handleChat = () => {
-    router.push("/chat");
+    try {
+      router.push("/chat");
+    } catch (error) {
+      console.error("Navigation error:", error);
+    }
   };
 
   return (
@@ -26,15 +36,17 @@ const pdfchat = () => {
                   Unlock the Power of Your PDFs
                 </h1>
                 <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-                  <span className="font-semibold text-gray-900">Summarize</span> and{" "}
-                  <span className="font-semibold text-gray-900">chat</span> with your PDF documents using advanced AI
-                  technology. Save time and gain insights effortlessly.
+                  <span className="font-semibold text-gray-900">Summarize</span>{" "}
+                  and <span className="font-semibold text-gray-900">chat</span>{" "}
+                  with your PDF documents using advanced AI technology. Save
+                  time and gain insights effortlessly.
                 </p>
               </div>
               <div className="space-x-4">
                 <Button
                   className="h-11 px-8 transform transition-all hover:scale-105 hover:shadow-lg bg-black hover:bg-gray-700"
                   onClick={handleSummarize}
+                  aria-label="Summarize PDF"
                 >
                   <FileText className="mr-2 h-4 w-4" />
                   Summarize PDF
@@ -43,6 +55,7 @@ const pdfchat = () => {
                   variant="outline"
                   className="h-11 px-8 transform transition-all hover:scale-105 hover:shadow-lg border-gray-900 text-gray-900 hover:bg-blue-50"
                   onClick={handleChat}
+                  aria-label="Chat with PDF"
                 >
                   <MessageSquare className="mr-2 h-4 w-4" />
                   Chat with PDF
@@ -56,4 +69,4 @@ const pdfchat = () => {
   );
 };
 
-export default pdfchat;
+export default PdfChat;
