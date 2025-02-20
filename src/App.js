@@ -7,7 +7,7 @@ import ResearchLaws from './pages/ResearchLaws'
 import CaseSummaries from './pages/Casesumm';
 import Insights from './pages/Insights';
 import LegalBriefDrafting from './pages/Briefdraft';
-import pdfchat from './pages/Chatpdf';
+import PdfChat from './pages/Chatpdf';
 
 
 
@@ -27,7 +27,7 @@ function App() {
           <Route path="/CaseSummaries" element={<CaseSummaries />} />
           <Route path="/Insights" element={<Insights />} />
           <Route path="/Briefdraft" element={<LegalBriefDrafting />} />
-          <Route path="/Chatpdf" element={<pdfchat />} />
+          <Route path="/Chatpdf" element={<PdfChat />} />
         </Routes>
       </div>
     
